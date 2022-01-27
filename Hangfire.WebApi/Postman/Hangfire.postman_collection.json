@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "bdd1e176-2f87-4bb0-941c-3e0adb4aa4e6",
+		"name": "CodeWithMukesh - Hangfire",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Recurring Jobs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{api-url}}/api/hangfire/invoice?userName=Clive",
+					"host": [
+						"{{api-url}}"
+					],
+					"path": [
+						"api",
+						"hangfire",
+						"invoice"
+					],
+					"query": [
+						{
+							"key": "userName",
+							"value": "Clive"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delayed Jobs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{api-url}}/api/hangfire/delayedWelcome?userName=Clive",
+					"host": [
+						"{{api-url}}"
+					],
+					"path": [
+						"api",
+						"hangfire",
+						"delayedWelcome"
+					],
+					"query": [
+						{
+							"key": "userName",
+							"value": "Clive"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fire-and-forget Jobs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{api-url}}/api/hangfire/welcome?userName=Clive",
+					"host": [
+						"{{api-url}}"
+					],
+					"path": [
+						"api",
+						"hangfire",
+						"welcome"
+					],
+					"query": [
+						{
+							"key": "userName",
+							"value": "Clive"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Continuations",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{api-url}}/api/hangfire/unsubscribe?userName=Clive",
+					"host": [
+						"{{api-url}}"
+					],
+					"path": [
+						"api",
+						"hangfire",
+						"unsubscribe"
+					],
+					"query": [
+						{
+							"key": "userName",
+							"value": "Clive"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api-url",
+			"value": "https://localhost:44382",
+			"type": "string"
+		}
+	]
+}
